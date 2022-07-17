@@ -31,7 +31,7 @@ Press <kbd>CTRL</kbd>**+**<kbd>M</kbd> to open the menu.
 
 -----------------------
 # Releases
-| Gartic.io Mod Menu| Cheat Version | Github | Greasyfork |
+| Gartic.io Mod Menu| Script Version | Github | Greasyfork |
 |----------------------------|-------------|-----------------|-----------------|
 | 2022 | v1.1 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/gartic.io%20mod%20menu.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu) | 
 | 2022 | v1.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v1.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1014346) | 
