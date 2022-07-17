@@ -1,7 +1,13 @@
-# gartic io drawing bot, answer assistant and many more features [![Downloads](https://img.shields.io/badge/downloads-1M-brightgreen?style=flat-square)](#releases)  
-
-
-![LOGO](./screenshots/logo.png)
+<div align="center">
+<img height="150" src="./screenshots/logo.png"></img>
+<h1>gartic io drawing bot, answer assistant and many more features</h1>
+<a href="#releases"> 
+<img height="30" src="https://img.shields.io/greasyfork/v/429227?label=RELEASE&style=for-the-badge&&labelColor=14161f&color=3455db&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABNUlEQVR4XmNgGJTAJPS2MxAvAOKLULzANPSOA8yxJiG3GrA63CTktgBQwyEg/g/E24B4EhDPAuLzULEFIM0gNoYB5kG32YES+4H4vknoLS90BaYht1OBch+hBmEaAJTIg0q6wZ0aersAKAZ2uknonVgg+w8+A04BJfch2wwNhwTjkNuWUC8BXXjrAAhjeAGo4D0Qt2AzgKiYBmr+AsRlaAa0AsVOGoXcNkDyVgZQ7Bo2FxwDSmxElzAJuxMOFH8AjKEoSFjcnobuVbAeoGAiNIDg8Y1kqwgwFqRMQ29rAtV8AIZBHIYLjILv8QAl7wHxFaBtChguAYoB5S6B0oRx0AM2HAnpJkjRUWh8zwHSRVAMYoPSwFGTkJsYhqMYZhx6lwOosAKIz0A1gTSC2BUgOaJihK6KACxxvcsBmqZ3AAAAXXRFWHRDb3B5cmlnaHQAQ3JlYXRlZCB3aXRoIEljb25mdS5jb20gLSBEZXJpdmF0aXZlIHdvcmsgb2YgTWF0ZXJpYWwgaWNvbnMgKENvcHlyaWdodCBHb29nbGUgSW5jLinxtJO+AAAAV3RFWHRMaWNlbnNlAExpY2Vuc2VkIHVuZGVyIEFwYWNoZSBMaWNlbnNlIHYyLjAgKGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMCnj13QbAAAAAElFTkSuQmCC"></img>
+</a>
+<a href="#releases"> 
+<img height="30" src="https://img.shields.io/greasyfork/dt/429227?labelColor=141f17&color=2aa745&label=DOWNLOADS&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAAXElEQVR4XmNgGLRAa7nrf2RMskOHqAFAZ2sB8St05yPxQXJaeMMDjyGENcNMxmII8ZqxGEK6ZjRD8PuZ5ASCTwPQ7wvwxAAsZS7AaYbmclcHIE4ggB2o6mqKDQMAqh55MwxuUuQAAABddEVYdENvcHlyaWdodABDcmVhdGVkIHdpdGggSWNvbmZ1LmNvbSAtIERlcml2YXRpdmUgd29yayBvZiBNYXRlcmlhbCBpY29ucyAoQ29weXJpZ2h0IEdvb2dsZSBJbmMuKfG0k74AAABXdEVYdExpY2Vuc2UATGljZW5zZWQgdW5kZXIgQXBhY2hlIExpY2Vuc2UgdjIuMCAoaHR0cDovL3d3dy5hcGFjaGUub3JnL2xpY2Vuc2VzL0xJQ0VOU0UtMi4wKePXdBsAAAAASUVORK5CYII%3D&style=for-the-badge"></img>
+</a>
+</div>
 
 
 ## Here are some images
