@@ -25,7 +25,6 @@ Press <kbd>CTRL</kbd>**+**<kbd>M</kbd> to open the menu.
 - **Auto Kick**
 - **Rainbow Drawing**
 - **Drawing Reporter**
-- **Username Copy**
 
 
 
