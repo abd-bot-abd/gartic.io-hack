@@ -48,7 +48,11 @@ let LOCALE = {
         auto_answer: "Auto Answer",
         rainbow_drawing: "Rainbow Drawing",
         disabled: "Disabled",
-        enabled: "Enabled"
+        enabled: "Enabled",
+        feature_is: "{option} feature is {status}",
+        select_image: "Please select an image",
+        drawing_started: "Drawing started",
+        drawing_completed: "Drawing completed"
     },
     tr: {
         mod_menu: "Mod Menü",
@@ -70,7 +74,11 @@ let LOCALE = {
         auto_answer: "Otomatik Cevap",
         rainbow_drawing: "Gökkuşağı Çizimi",
         disabled: "Devre Dışı",
-        enabled: "Etkin"
+        enabled: "Etkin",
+        feature_is: "{option} özelliği {status} durumunda",
+        select_image: "Lütfen resim seçin",
+        drawing_started: "Çizim başladı",
+        drawing_completed: "Çizim işlemi bitti"
     },
     az: {
         mod_menu: "Mod Menyu",
@@ -92,7 +100,11 @@ let LOCALE = {
         auto_answer: "Avtomatik cavab",
         rainbow_drawing: "Gökboya çəkmə",
         disabled: "Deaktiv",
-        enabled: "Aktiv"
+        enabled: "Aktiv",
+        feature_is: "{option} xüsusiyyəti {status} halında",
+        select_image: "Zəhmət olmasa şəkil seçin",
+        drawing_started: "Çəkmə başladı",
+        drawing_completed: "Çəkmə tamamlandı"
     },
     ar: {
         mod_menu: "Mod Menu",
@@ -114,7 +126,11 @@ let LOCALE = {
         auto_answer: "Auto Answer",
         rainbow_drawing: "Rainbow Drawing",
         disabled: "Disabled",
-        enabled: "Enabled"
+        enabled: "Enabled",
+        feature_is: "{option} feature is {status}",
+        select_image: "Please select an image",
+        drawing_started: "Drawing started",
+        drawing_completed: "Drawing completed"
     },
     pt_br: {
         mod_menu: "Mod Menu",
@@ -136,7 +152,11 @@ let LOCALE = {
         auto_answer: "Auto Answer",
         rainbow_drawing: "Rainbow Drawing",
         disabled: "Disabled",
-        enabled: "Enabled"
+        enabled: "Enabled",
+        feature_is: "{option} feature is {status}",
+        select_image: "Please select an image",
+        drawing_started: "Drawing started",
+        drawing_completed: "Drawing completed"
     }
 };
 
@@ -201,34 +221,38 @@ menu.addFileDrop({label:getTranslation('drawing_bot',LANG),title:getTranslation(
 menu.addButton({title:getTranslation('draw',LANG)}).on('click', (e) => {
     console.log(file);
     if(file){
-        new SendToast({title:getTranslation('drawing_bot',LANG), message:"Draw bot started", type:"Info"});
-        //newWs.send(`42[10,${playerServerİd},[4]`);
+        new SendToast({title:getTranslation('drawing_bot',LANG), message:getTranslation('drawing_started', LANG), type:"Info"});
         image.src = URL.createObjectURL(file[0]);
         console.log(e.target.innerHTML);
     }else{
-        new SendToast({title:getTranslation('drawing_bot',LANG), message:"Lütfen resim seçin", type:"Error"});
+        new SendToast({title:getTranslation('drawing_bot',LANG), message:getTranslation('select_image', LANG), type:"Error"});
     }
 });
 menu.addSwitch({label:getTranslation('anti_afk',LANG)}).on('change', (e) => {
     settingData.anti_afk = e.target.checked;
-    //new SendToast({message:e.target.checked ? "açık" : "kapalı", type:"Success"});
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('anti_afk', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
 
 
 menu.addSwitch({label:getTranslation('auto_kick',LANG)}).on('change', (e) => {
     settingData.auto_kick = e.target.checked;
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_kick', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
 menu.addSwitch({label:getTranslation('auto_report',LANG)}).on('change', (e) => {
     settingData.auto_report = e.target.checked;
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_report', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
 menu.addSwitch({label:getTranslation('rainbow_drawing',LANG)}).on('change', (e) => {
     settingData.rainbow_drawing = e.target.checked;
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('rainbow_drawing', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
 menu.addSwitch({label:getTranslation('auto_skip',LANG)}).on('change', (e) => {
     settingData.auto_skip = e.target.checked;
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_skip', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
 menu.addSwitch({label:getTranslation('auto_answer',LANG)}).on('change', (e) => {
     settingData.auto_answer = e.target.checked;
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_answer', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
 menu.addHotkey({label:getTranslation('open_menu_key',LANG), keyevent: settingData.open_menu_key}).on('Hotkey', (e) => {
     settingData.open_menu_key = e.detail;
@@ -466,7 +490,6 @@ let dots = [];
 var image = new Image();
 image.crossOrigin = "Anonymous";
 image.onload = function() {
-    console.log(file);
     brushDiameter = document.querySelector('[name="size"]').value || 4;
     let lines = generateLines(image);
     lines.sort((line1, line2) => {
@@ -474,7 +497,15 @@ image.onload = function() {
     });
     lines.forEach((line,index) => {
         drawImage(line.start.x, line.start.y, line.end.x, line.end.y, line.color);
+        let gameCanvas = document.querySelector('#drawing canvas');
+        const context = gameCanvas.getContext('2d');
+        context.beginPath();
+        context.moveTo(line.start.x, line.start.y);
+        context.lineTo(line.end.x, line.end.y);
+        context.strokeStyle = line.color.replace('x','#');
+        context.stroke();
     });
+    new SendToast({title:getTranslation('drawing_bot',LANG), message:getTranslation('drawing_completed',LANG), type:"Success"});
 }
 
 let generateLines = function (img) {
@@ -951,9 +982,6 @@ function getNearestAvailableColor(color){
         colors.push(getcolor);
     });
 
-    //let rawColors = JSON.stringify(colors);
-    //console.log(rawColors);
-
     if (color.a == 0){
         nearestColor = new Color(0, 0, 0, 0);
     }
@@ -981,7 +1009,7 @@ function rgbToHex(r, g, b) {
     return `x${hexR}${hexG}${hexB}`;
 }
 
-function drawImage(startX,startY,stopX,stopY, color) { // tr: still drawing under construction // en: still drawing under construction
+function drawImage(startX,startY,stopX,stopY, color) { // tr: çizimi soket gönder // en: send drawing socket
     //newWs.send(`42[10,${playerServerİd},[6,${penSize}]]`)
     newWs.send(`42[10,${playerServerİd},[5,"${color}"]]`) //color
     newWs.send(`42[10,${playerServerİd},[2,${startX},${startY},${stopX},${stopY}]]`) //[2,x,y]
