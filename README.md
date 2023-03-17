@@ -49,6 +49,15 @@ Press <kbd>CTRL</kbd>**+**<kbd>M</kbd> to open the menu.
 <details>
   <summary> Changelog </summary>
   <details>
+     <summary> v2.0 </summary>
+  <ul> <li>New interface</li> </ul>
+     <ul> <li>Improved and faster word guessing</li> </ul>
+     <ul> <li>Drawing bot draws better now</li> </ul>
+      <ul> <li>Added World list for new languages</li> </ul>
+     <ul> <li>Codes are rewritten from scratch</li> </ul>
+     <ul> <li>Note: It won't work on mobile devices.</li> </ul>
+      </details>
+  <details>
  <summary> v1.1 </summary>
   <ul> <li>brazilian portuguese added to new word list</li> </ul>
     <ul> <li>few bug fixes</li> </ul>
