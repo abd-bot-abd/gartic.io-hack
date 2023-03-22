@@ -1,0 +1,37 @@
+{
+  "word_list": [
+    {
+      "category": "genel",
+      "words": [
+        "merhaba",
+        "teşekkürler",
+        "lütfen",
+        "günaydın",
+        "iyi akşamlar"
+      ],
+      "creator": "user1"
+    },
+    {
+      "category": "bilim",
+      "words": [
+        "elektron",
+        "atom",
+        "helyum",
+        "karbon",
+        "DNA"
+      ],
+      "creator": "user2"
+    },
+    {
+      "category": "teknoloji",
+      "words": [
+        "siber güvenlik",
+        " yapay zeka",
+        "blok zinciri",
+        "bulut bilişim",
+        "nesnelerin interneti"
+      ],
+      "creator": "user3"
+    }
+  ]
+}
