@@ -32,7 +32,8 @@ Press <kbd>CTRL</kbd>**+**<kbd>M</kbd> to open the menu.
 # Releases
 | Gartic.io Mod Menu| Script Version | Github | Greasyfork |
 |----------------------------|-------------|-----------------|-----------------|
-| 2023 | v2.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/gartic.io%20mod%20menu.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu) | 
+| 2023 | v2.1 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/gartic.io%20mod%20menu.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu) | 
+| 2022 | v2.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v2.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1165920) | 
 | 2022 | v1.1 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v1.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1041132) | 
 | 2022 | v1.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v1.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1014346) | 
 | 2021 | v0.9 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v0.9.user.js) | [Download](https://greasyfork.org/tr/scripts/429227-gartic-io-mod-menu?version=1000886) |
@@ -47,6 +48,15 @@ Press <kbd>CTRL</kbd>**+**<kbd>M</kbd> to open the menu.
 
 <details>
   <summary> Changelog </summary>
+   <details>
+     <summary> v2.1 </summary>
+  <ul> <li>In this update:</li> </ul>
+     <ul> <li>New word lists have been updated</li> </ul>
+     <ul> <li>'Anime' category has been added</li> </ul>
+      <ul> <li>Word finding feature now works more accurately</li> </ul>
+     <ul> <li>Some bugs have been fixed.</li> </ul>
+     <ul> <li>Important note: The word list may not work in older versions, so please use the latest version.</li> </ul>
+      </details>
   <details>
      <summary> v2.0 </summary>
   <ul> <li>New interface</li> </ul>
