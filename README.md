@@ -33,7 +33,7 @@ Press <kbd>CTRL</kbd>**+**<kbd>M</kbd> to open the menu.
 | Gartic.io Mod Menu| Script Version | Github | Greasyfork |
 |----------------------------|-------------|-----------------|-----------------|
 | 2023 | v2.1 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/gartic.io%20mod%20menu.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu) | 
-| 2022 | v2.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v2.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1165920) | 
+| 2023 | v2.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v2.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1165920) | 
 | 2022 | v1.1 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v1.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1041132) | 
 | 2022 | v1.0 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v1.0.user.js) | [Download](https://greasyfork.org/scripts/429227-gartic-io-mod-menu?version=1014346) | 
 | 2021 | v0.9 | [Download](	https://github.com/anonimbiri/gartic.io-hack/raw/main/script/other_versions/gartic.io%20mod%20menu%20v0.9.user.js) | [Download](https://greasyfork.org/tr/scripts/429227-gartic-io-mod-menu?version=1000886) |
