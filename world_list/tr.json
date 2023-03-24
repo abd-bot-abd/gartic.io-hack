@@ -1,26 +1,8 @@
 {
-  "lang": {
-    "translator_by": "anonimbiri",
-    "translator": "Çevirmen",
-    "Cheat_İnjected": "Hile Enjekte Edildi :)",
-    "Github_source_code": "Github kaynak kodu",
-    "Anti_AFK": "AFK Engelleyici",
-    "Auto_Report": "Otomatik Şikayet",
-    "Auto_Skip": "Otomatik Geç",
-    "Auto_kick": "Otomatik Oy At",
-    "Auto_Answer": "Otomatik Bil",
-    "Rainbow_Drawing": "Renkli Çizim",
-    "Disabled": "Devre Dışı",
-    "Enabled": "Etkin",
-    "Change_room": "Oda Değiştir",
-    "Upload_image_from_clipboard": "Panodan Resim Yükle",
-    "Full_screen": "Tam Ekran",
-    "copy_nickname": "KULLANICI ADINI KOPYALA",
-    "search": "Ara",
-    "ok": "Tamam",
-    "draw_the_image":"Resmi çiz"
-  },
-  "world_list": [
+  "word_list": [
+    {
+      "category": "general",
+      "words": [
         "psikolog",
         "zombi",
         "modem",
@@ -1311,5 +1293,7 @@
         "yonca",
         "kurabiye",
         "bilet"
-    ]  
+      ],
+      "creator": "anonimbiri"
+    }
 }
