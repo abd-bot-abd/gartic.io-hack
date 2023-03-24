@@ -5,7 +5,7 @@
 // @name:ar      قائمة تعديل gartic.io
 // @name:br      menu de mod gartic.io
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @homepageURL  https://github.com/anonimbiri/gartic.io-hack
 // @supportURL   https://github.com/anonimbiri/gartic.io-hack/issues
 // @description    drawing bot, answer assistant and many more features
@@ -16,7 +16,7 @@
 // @author       Anonim Biri
 // @match        https://gartic.io/*
 // @icon         https://i.imgur.com/nTF84Id.png
-// @require https://greasyfork.org/scripts/462013-abnormal-menu/code/Abnormal%20Menu.js?version=1162637
+// @require https://greasyfork.org/scripts/462013-abnormal-menu/code/Abnormal%20Menu.js?version=1164920
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
@@ -35,6 +35,7 @@ let LOCALE = {
         open_menu_key: "Open Menu Key",
         drag_or_click: "Drag or Click",
         language_list: "Language List",
+        game_mode:"Game Mode",
         turkish: "Turkish",
         english: "English",
         arabic: "Arabic",
@@ -52,7 +53,23 @@ let LOCALE = {
         feature_is: "{option} feature is {status}",
         select_image: "Please select an image",
         drawing_started: "Drawing started",
-        drawing_completed: "Drawing completed"
+        drawing_completed: "Drawing completed",
+        save_config: "Save Config",
+        reset_config: "Reset Config",
+        rainbow_drawing_speed: "Rainbow Drawing Speed (in ms)",
+        auto_answer_speed: "Auto Answer Speed (in ms)",
+        the_word_list_has_been_prepared_by: "The word list has been prepared by {creator}",
+        general: "General",
+        anime: "Anime",
+        flags: "Flags",
+        animals: "Animals",
+        foods: "Foods",
+        professions: "Professions",
+        logos: "Logos",
+        verbs: "Verbs",
+        objects: "Objects",
+        settings_resetting: "Settings resetting",
+        settings_saved: "Settings saved"
     },
     tr: {
         mod_menu: "Mod Menü",
@@ -61,6 +78,7 @@ let LOCALE = {
         open_menu_key: "Menü Açma Tuşu",
         drag_or_click: "Sürükle Bırak veya Tıkla",
         language_list: "Dil Listesi",
+        game_mode:"Oyun Modu",
         turkish: "Türkçe",
         english: "İngilizce",
         arabic: "Arapça",
@@ -78,7 +96,23 @@ let LOCALE = {
         feature_is: "{option} özelliği {status} durumunda",
         select_image: "Lütfen resim seçin",
         drawing_started: "Çizim başladı",
-        drawing_completed: "Çizim işlemi bitti"
+        drawing_completed: "Çizim işlemi bitti",
+        save_config: "Ayarları Kaydet",
+        reset_config: "Ayarları Sıfırla",
+        rainbow_drawing_speed: "Gökkuşağı Çizim Hızı (ms cinsinden)",
+        auto_answer_speed: "Otomatik Cevap Hızı (ms cinsinden)",
+        the_word_list_has_been_prepared_by: "Kelime listesi {creator} tarafından hazırlanmıştır.",
+        general: "Genel",
+        anime: "Anime",
+        flags: "Bayraklar",
+        animals: "Hayvanlar",
+        foods: "Yemekler",
+        professions: "Meslekler",
+        logos: "Logolar",
+        verbs: "Fiiller",
+        objects: "Nesneler",
+        settings_resetting: "Ayarlar sıfırlanıyor",
+        settings_saved: "Ayarlar kaydedildi"
     },
     az: {
         mod_menu: "Mod Menyu",
@@ -87,6 +121,7 @@ let LOCALE = {
         open_menu_key: "Menyu Açma Düyməsi",
         drag_or_click: "Sürüklə və ya Tıkla",
         language_list: "Dil Siyahısı",
+        game_mode:"Oyun Rejimi",
         turkish: "Türkcə",
         english: "İngiliscə",
         arabic: "Ərəbcə",
@@ -104,7 +139,23 @@ let LOCALE = {
         feature_is: "{option} xüsusiyyəti {status} halında",
         select_image: "Zəhmət olmasa şəkil seçin",
         drawing_started: "Çəkmə başladı",
-        drawing_completed: "Çəkmə tamamlandı"
+        drawing_completed: "Çəkmə tamamlandı",
+        save_config: "Konfiqurasiyaları Yadda Saxla",
+        reset_config: "Konfiqurasiyaları Sıfırla",
+        rainbow_drawing_speed: "Göy rəngli Şəkillərin Çəkilən Sürəti (ms ilə)",
+        auto_answer_speed: "Avtomatik Cavabın Sürəti (ms ilə)",
+        the_word_list_has_been_prepared_by: "Sözlük {creator} tərəfindən hazırlanmışdır.",
+        general: "Ümumi",
+        anime: "Anime",
+        flags: "Bayraqlar",
+        animals: "Heyvanlar",
+        foods: "Yeməklər",
+        professions: "Peşələr",
+        logos: "Logolar",
+        verbs: "Əməllər",
+        objects: "Obyektlər",
+        settings_resetting: "Ayarlar sıfırlanır",
+        settings_saved: "Ayarlar qeyd edildi"
     },
     ar: {
         mod_menu: "Mod Menu",
@@ -113,6 +164,7 @@ let LOCALE = {
         open_menu_key: "Open Menu Key",
         drag_or_click: "Drag or Click",
         language_list: "Language List",
+        game_mode:"Game Mode",
         turkish: "Turkish",
         english: "English",
         arabic: "Arabic",
@@ -130,7 +182,23 @@ let LOCALE = {
         feature_is: "{option} feature is {status}",
         select_image: "Please select an image",
         drawing_started: "Drawing started",
-        drawing_completed: "Drawing completed"
+        drawing_completed: "Drawing completed",
+        save_config: "Save Config",
+        reset_config: "Reset Config",
+        rainbow_drawing_speed: "Rainbow Drawing Speed (in ms)",
+        auto_answer_speed: "Auto Answer Speed (in ms)",
+        the_word_list_has_been_prepared_by: "The word list has been prepared by {creator}",
+        general: "General",
+        anime: "Anime",
+        flags: "Flags",
+        animals: "Animals",
+        foods: "Foods",
+        professions: "Professions",
+        logos: "Logos",
+        verbs: "Verbs",
+        objects: "Objects",
+        settings_resetting: "Settings resetting",
+        settings_saved: "Settings saved"
     },
     pt_br: {
         mod_menu: "Mod Menu",
@@ -139,6 +207,7 @@ let LOCALE = {
         open_menu_key: "Open Menu Key",
         drag_or_click: "Drag or Click",
         language_list: "Language List",
+        game_mode:"Game Mode",
         turkish: "Turkish",
         english: "English",
         arabic: "Arabic",
@@ -156,7 +225,23 @@ let LOCALE = {
         feature_is: "{option} feature is {status}",
         select_image: "Please select an image",
         drawing_started: "Drawing started",
-        drawing_completed: "Drawing completed"
+        drawing_completed: "Drawing completed",
+        save_config: "Save Config",
+        reset_config: "Reset Config",
+        rainbow_drawing_speed: "Rainbow Drawing Speed (in ms)",
+        auto_answer_speed: "Auto Answer Speed (in ms)",
+        the_word_list_has_been_prepared_by: "The word list has been prepared by {creator}",
+        general: "General",
+        anime: "Anime",
+        flags: "Flags",
+        animals: "Animals",
+        foods: "Foods",
+        professions: "Professions",
+        logos: "Logos",
+        verbs: "Verbs",
+        objects: "Objects",
+        settings_resetting: "Settings resetting",
+        settings_saved: "Settings saved"
     }
 };
 
@@ -174,7 +259,7 @@ function getTranslation(key, language) {
     return LOCALE[language][key];
 }
 
-let settingData = {
+let settingData = JSON.parse(localStorage.getItem('settingData')) || {
     "world_list_lang":"en",
     "anti_afk": false,
     "auto_kick": false,
@@ -184,8 +269,25 @@ let settingData = {
     "rainbow_drawing_ms": 10,
     "auto_answer": false,
     "auto_answer_ms": 1000,
-    "open_menu_key": new KeyboardEvent('keydown', { code: 'KeyM', ctrlKey: true, key: 'M' }),
+    "open_menu_key": serializeKeyboardEvent(new KeyboardEvent('keydown', { code: 'KeyM', ctrlKey: true, key: 'M' })),
 };
+
+function serializeKeyboardEvent(event) {
+    return JSON.stringify({
+        type: "KeyboardEvent",
+        code: event.code,
+        ctrlKey: event.ctrlKey,
+        key: event.key
+    });
+}
+function deserializeKeyboardEvent(str) {
+    const obj = JSON.parse(str);
+    if (obj.type === "KeyboardEvent") {
+        return new KeyboardEvent("keydown", { code: obj.code, ctrlKey: obj.ctrlKey, key: obj.key });
+    }
+    return null;
+}
+settingData.open_menu_key = deserializeKeyboardEvent(settingData.open_menu_key);
 
 var menu = new CreateMenu({title:getTranslation('mod_menu',LANG)});
 const screenWidth = window.innerWidth;
@@ -206,12 +308,37 @@ selectMenu.on('change', (e) => {
     fetch(`https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/${selectedOption}.json`)
         .then(response => response.json())
         .then(data => {
-        console.log(data.world_list);
-        wordList = data.world_list;
+        selectMenu2.clearAllItems();
+        const selectedCategoryObj = data.word_list.find(categoryObj => categoryObj.category === "general");
+        if (selectedCategoryObj) {
+            console.log(selectedCategoryObj.words);
+            console.log(getTranslation('the_word_list_has_been_prepared_by', LANG).replace('{creator}', selectedCategoryObj.creator));
+            wordList = selectedCategoryObj.words;
+            new SendToast({message:getTranslation('the_word_list_has_been_prepared_by', LANG).replace('{creator}', selectedCategoryObj.creator), type:"Info"});
+        }
+        data.word_list.forEach(categoryObj => {
+            selectMenu2.addItem(getTranslation(categoryObj.category, LANG),categoryObj.category);
+        });
     });
 });
 
+var selectMenu2 = menu.addSelectMenu({label:getTranslation('game_mode',LANG)})
 
+selectMenu2.on('change', (e) => {
+    const selectedOption = e.target.options[e.target.selectedIndex].value;
+    fetch(`https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/${selectMenu.getValue()}.json`)
+        .then(response => response.json())
+        .then(data => {
+        const selectedCategoryObj = data.word_list.find(categoryObj => categoryObj.category === selectedOption);
+
+        if (selectedCategoryObj) {
+            console.log(selectedCategoryObj.words);
+            console.log(getTranslation('the_word_list_has_been_prepared_by', LANG).replace('{creator}', selectedCategoryObj.creator));
+            wordList = selectedCategoryObj.words;
+            new SendToast({message:getTranslation('the_word_list_has_been_prepared_by', LANG).replace('{creator}', selectedCategoryObj.creator), type:"Info"});
+        }
+    });
+});
 
 let file = null;
 menu.addFileDrop({label:getTranslation('drawing_bot',LANG),title:getTranslation('drag_or_click',LANG)}).on('Filedrop', (e) => {
@@ -228,34 +355,53 @@ menu.addButton({title:getTranslation('draw',LANG)}).on('click', (e) => {
         new SendToast({title:getTranslation('drawing_bot',LANG), message:getTranslation('select_image', LANG), type:"Error"});
     }
 });
-menu.addSwitch({label:getTranslation('anti_afk',LANG)}).on('change', (e) => {
+menu.addSwitch({label:getTranslation('anti_afk',LANG), value:settingData.anti_afk}).on('change', (e) => {
     settingData.anti_afk = e.target.checked;
     new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('anti_afk', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
-
-
-menu.addSwitch({label:getTranslation('auto_kick',LANG)}).on('change', (e) => {
+menu.addSwitch({label:getTranslation('auto_kick',LANG), value:settingData.auto_kick}).on('change', (e) => {
     settingData.auto_kick = e.target.checked;
     new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_kick', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
-menu.addSwitch({label:getTranslation('auto_report',LANG)}).on('change', (e) => {
+menu.addSwitch({label:getTranslation('auto_report',LANG), value:settingData.auto_report}).on('change', (e) => {
     settingData.auto_report = e.target.checked;
     new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_report', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
-menu.addSwitch({label:getTranslation('rainbow_drawing',LANG)}).on('change', (e) => {
-    settingData.rainbow_drawing = e.target.checked;
-    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('rainbow_drawing', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
-});
-menu.addSwitch({label:getTranslation('auto_skip',LANG)}).on('change', (e) => {
+menu.addSwitch({label:getTranslation('auto_skip',LANG), value:settingData.auto_skip}).on('change', (e) => {
     settingData.auto_skip = e.target.checked;
     new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_skip', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
-menu.addSwitch({label:getTranslation('auto_answer',LANG)}).on('change', (e) => {
+menu.addSwitch({label:getTranslation('auto_answer',LANG), value:settingData.auto_answer}).on('change', (e) => {
     settingData.auto_answer = e.target.checked;
     new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('auto_answer', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
 });
+menu.addInput({label:getTranslation('auto_answer_speed',LANG), placeholder:"1000", type:"number", min:1, max:10000, value:settingData.auto_answer_ms}).on('change', (e) => {
+    settingData.auto_answer_ms = e.target.value;
+});
+menu.addSwitch({label:getTranslation('rainbow_drawing',LANG), value:settingData.rainbow_drawing}).on('change', (e) => {
+    settingData.rainbow_drawing = e.target.checked;
+    new SendToast({message:getTranslation('feature_is', LANG).replace('{option}', getTranslation('rainbow_drawing', LANG)).replace('{status}', e.target.checked ? getTranslation('enabled', LANG) : getTranslation('disabled', LANG)), type:"Success"});
+});
+menu.addInput({label:getTranslation('rainbow_drawing_speed',LANG), placeholder:"10", type:"number", min:1, max:10000, value:settingData.rainbow_drawing_ms}).on('change', (e) => {
+    settingData.rainbow_drawing_ms = e.target.value;
+});
 menu.addHotkey({label:getTranslation('open_menu_key',LANG), keyevent: settingData.open_menu_key}).on('Hotkey', (e) => {
     settingData.open_menu_key = e.detail;
+});
+menu.addButton({title:getTranslation('save_config',LANG)}).on('click', (e) => {
+    // Serialize the open_menu_key property
+    settingData.open_menu_key = serializeKeyboardEvent(settingData.open_menu_key);
+
+    // Save the settingData object to localStorage
+    localStorage.setItem("settingData", JSON.stringify(settingData));
+
+    new SendToast({message:getTranslation('settings_saved', LANG), type:"Info"});
+
+    settingData.open_menu_key = deserializeKeyboardEvent(settingData.open_menu_key);
+});
+menu.addButton({title:getTranslation('reset_config',LANG)}).on('click', (e) => {
+    localStorage.removeItem('settingData');
+    new SendToast({message:getTranslation('settings_resetting', LANG), type:"Info"});
 });
 new SendToast({message:"to open the menu, press Ctrl + M", icon:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAQAAADlauupAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAAGAAAABgAPBrQs8AAAAHdElNRQfmCRsQBQIJntbJAAAA80lEQVQ4y8WSP8rCUBDEf/uZwCuCN/ECXsQ/F7KxFaKksIreISmsRTBHSGmXYCUEMxZPBUEb84EDC7PD7jze7sKvYVKvB/3+d+3nM1JR6GsUBZ40jZQk0ukklaW0Xnt9t/Mhea0sfU2S+B7pblBVaoNAbZZJaSo55/XxWBqNPHdOSlO1WaY2CKSqkiSTpC5D/HvJNJvBagVNA5MJOhxgv4fpFK5XWCzQfP7ZwMyQ2SPBzOARd+3Jn2v8ly/UNQpDlOew3doHwGaD8hyFIdQ1QOANogiLYxgM4HKRlsv37w2HmHMQxxBFfm5dDqk9Hruf8s9xA/KFIrPBQJcRAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA5LTI3VDE2OjA1OjAyKzAwOjAwmRa+2wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wOS0yN1QxNjowNTowMiswMDowMOhLBmcAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjItMDktMjdUMTY6MDU6MDIrMDA6MDC/Xie4AAAAAElFTkSuQmCC", type:"Info"});
 
@@ -286,6 +432,7 @@ let langMatch = {
 };
 
 newWs=null;
+var matches = [];
 
 window.WebSocket = new Proxy(WebSocket, {
     construct(target, args) {
@@ -304,22 +451,34 @@ window.WebSocket = new Proxy(WebSocket, {
             //console.log(data);
             switch (data[0]) {
                 case 13: {
-                    console.log(data[2]);
+                    const index = matches.indexOf(data[2]);
+                    if (index !== -1) {
+                        matches.splice(index, 1);
+                        //console.log(data[2]);
+                    }
                     break;
                 }
                 case 5: {
                     playerİd = data[1];
                     playerServerİd = data[2];
                     playerLang = data[4].idioma;
-                    console.log(playerLang);
                     players = data[5];
+                    selectMenu.changeSelectedIndex(langMatch.index[playerLang]);
                     fetch(`https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/${langMatch.code[playerLang]}.json`)
                         .then(response => response.json())
                         .then(data => {
-                        console.log(data.world_list);
-                        wordList = data.world_list;
+                        selectMenu2.clearAllItems();
+                        const selectedCategoryObj = data.word_list.find(categoryObj => categoryObj.category === "general");
+                        if (selectedCategoryObj) {
+                            console.log(selectedCategoryObj.words);
+                            console.log(getTranslation('the_word_list_has_been_prepared_by', LANG).replace('{creator}', selectedCategoryObj.creator));
+                            wordList = selectedCategoryObj.words;
+                            new SendToast({message:getTranslation('the_word_list_has_been_prepared_by', LANG).replace('{creator}', selectedCategoryObj.creator), type:"Info"});
+                        }
+                        data.word_list.forEach(categoryObj => {
+                            selectMenu2.addItem(getTranslation(categoryObj.category, LANG),categoryObj.category);
+                        });
                     });
-                    selectMenu.changeSelectedIndex(langMatch.index[playerLang]);
                     break;
                 }
                 case 45: {
@@ -330,32 +489,36 @@ window.WebSocket = new Proxy(WebSocket, {
                 }
                 case 30: {
                     hit = true;
+                    clearInterval(autoAnswer);
                     var searchWord = data[1].join("");
-                    (async () => {
-                        var matches = await searchWordInList(searchWord);
+                    //remove all child element
+                    while (worldListMenu.menuItemsContainer.firstChild) {
+                        worldListMenu.menuItemsContainer.removeChild(worldListMenu.menuItemsContainer.firstChild);
+                    }
 
-                        for (var i = 0; i < matches.length; i++) {
-                            worldListMenu.addButton({title:matches[i]}).on('click', (e) => {
-                                ws.send(`42[13,${playerServerİd},"${e.target.innerHTML}"]`);
-                                e.target.style.borderColor = "red";
-                                e.target.parentNode.appendChild(e.target);
+                    matches = guessWord(searchWord)
 
-                            });
-                        }
+                    for (var i = 0; i < matches.length; i++) {
+                        worldListMenu.addButton({title:matches[i]}).on('click', (e) => {
+                            ws.send(`42[13,${playerServerİd},"${e.target.innerHTML}"]`);
+                            e.target.style.borderColor = "red";
+                            e.target.parentNode.appendChild(e.target);
 
-                        if (settingData.auto_answer == true) {
-                            let currentIndex = 0;
-                            autoAnswer = setInterval(function() {
-                                if (currentIndex < matches.length) {
-                                    newWs.send(`42[13,${playerServerİd},"${matches[currentIndex]}"]`);
-                                    currentIndex++;
-                                } else {
-                                    clearInterval(autoAnswer);
-                                }
-                            }, settingData.auto_answer_ms);
-                        }
+                        });
+                    }
 
-                    })()
+                    if (settingData.auto_answer == true) {
+                        let currentIndex = 0;
+                        autoAnswer = setInterval(function() {
+                            if (currentIndex < matches.length) {
+                                newWs.send(`42[13,${playerServerİd},"${matches[currentIndex]}"]`);
+                                currentIndex++;
+                            } else {
+                                clearInterval(autoAnswer);
+                            }
+                        }, settingData.auto_answer_ms);
+                    }
+
                     break;
                 }
                 case 19: {
@@ -445,30 +608,20 @@ document.addEventListener('keypress', function(event) {
 
 
 var wordList = [];
-async function searchWordInList(searchWord) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            var matchList = [];
-            for (var i = 0; i < wordList.length; i++) {
-                var currentWord = wordList[i].toLowerCase();
-                var search = searchWord.toLowerCase();
-                if (currentWord.length === search.length) {
-                    var match = true;
-                    for (var j = 0; j < currentWord.length; j++) {
-                        if (search[j] !== '_' && search[j] !== currentWord[j]) {
-                            match = false;
-                            break;
-                        }
-                    }
-                    if (match) {
-                        if(!matchList.includes(currentWord)) matchList.push(currentWord);
-                        //matchList.push(wordList[i]);
-                    }
-                }
+function guessWord(word) {
+    const matchingWords = wordList.filter((item) => { // Aradığımız kelimeyi filtreleyerek uygun olanları yeni bir diziye ekliyoruz.
+        const matchingWords = item.split(' '); // Kelimeleri ayırarak bir dizi haline getiriyoruz.
+        if (matchingWords.length !== word.split(' ').length) return false; // Boşluk miktarına göre kontrol ediyoruz.
+        for (let i = 0; i < matchingWords.length; i++) {
+            if (word.split(' ')[i].length !== matchingWords[i].length) return false; // Bilinmeyen harf sayısı kontrolü yapıyoruz.
+            for (let j = 0; j < matchingWords[i].length; j++) {
+                if (word.split(' ')[i][j] === '_' ) continue; // Bilinmeyen harfi atlıyoruz.
+                if (word.split(' ')[i][j] !== matchingWords[i][j]) return false; // Karakterlerin eşitliğini kontrol ediyoruz.
             }
-            resolve(matchList);
-        }, 2000);
+        }
+        return true;
     });
+    return matchingWords;
 }
 
 var width = 100;
@@ -1014,3 +1167,22 @@ function drawImage(startX,startY,stopX,stopY, color) { // tr: çizimi soket gön
     newWs.send(`42[10,${playerServerİd},[5,"${color}"]]`) //color
     newWs.send(`42[10,${playerServerİd},[2,${startX},${startY},${stopX},${stopY}]]`) //[2,x,y]
 }
+
+
+/*------------------------------------------------------------------------------
+TR: Sürüm kontrol bölümü
+EN: Version control section
+------------------------------------------------------------------------------*/
+
+const greasyForkUrl = 'https://greasyfork.org/en/scripts/429227-gartic-io-mod-menu.json';
+fetch(greasyForkUrl)
+  .then(response => response.json())
+  .then(data => {
+    const latestVersion = data.version;
+    const currentVersion = GM_info.script.version;
+    if (latestVersion > currentVersion) {
+      const tmEditUrl = `https://www.tampermonkey.net/dashboard.php?ext=dhdg&edit=${GM_info.script.uuid}`;
+      window.open(tmEditUrl, '_blank');
+    }
+});
+
