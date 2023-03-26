@@ -457,7 +457,7 @@ window.WebSocket = new Proxy(WebSocket, {
         let ws = new target(...args);
         ws.send = new Proxy(ws.send, {
             apply(target, thisArg, args) {
-                console.log("➡️ %c"+args[0], "color: #008080; font-size: 16px; font-weight: bold;");
+                //console.log("➡️ %c"+args[0], "color: #008080; font-size: 16px; font-weight: bold;");
                 if(Array.isArray(args) && args.length > 0 && args[0].toString().startsWith('42') && args[0].toString().includes('34')) {
                     newWs.send(`42[30,${playerServerİd}]`)
                     newWs.send(`42[30,${playerServerİd}]`)
@@ -472,7 +472,7 @@ window.WebSocket = new Proxy(WebSocket, {
         });
         newWs = ws;
         ws.addEventListener('message', (event) => {
-            console.log("⬅️ %c"+event.data, "color: #FFA500; font-size: 16px; font-weight: bold;");
+            //console.log("⬅️ %c"+event.data, "color: #FFA500; font-size: 16px; font-weight: bold;");
             if (!event.data.includes('[')) return;
             const data = JSON.parse(event.data.replace(/^\d+/g, ''));
             //console.log(data);
