@@ -1,4 +1,15 @@
 <div align="center">
+  <h1 style="font-size: 3em;">Eleveda👋 - Goodbye👋</h1>
+  <img src="https://i.imgur.com/oiEon0B.png" height="150">
+  <p style="font-size: 1.5em;">This project has been created for educational purposes only. The project will end soon. We do not accept encouraging people to take the wrong path. This project was only created to explain how it works.</p>
+</div>
+
+
+
+
+
+-----------------------
+<div align="center">
 <img height="150" src="./screenshots/logo.png"></img>
 <h1>gartic io drawing bot, answer assistant and many more features</h1>
 <a href="#releases"> 
