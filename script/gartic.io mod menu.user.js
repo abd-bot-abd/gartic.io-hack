@@ -509,10 +509,13 @@ window.WebSocket = new Proxy(WebSocket, {
                     break;
                 }
                 case 45: {
-                    if(data[2] == playerİd && settingData.auto_kick == true){
-                        newWs.send(`42[45,${playerServerİd},["${data[1]}",true]]`)
-                    }
-                    break;
+    if (data[2] === playerİd && settingData.auto_kick === true) {
+        const command = `42[45,${playerServerİd},["${data[1]}",true]]`;
+        newWs.send(command);
+    }
+    break;
+}
+
                 }
                 case 30: {
                     hit = true;
